@@ -45,7 +45,7 @@ jobs:
           git checkout main
 
           # Add ไฟล์ทั้งหมดรวมถึงในโฟลเดอร์
-          git add *.xls *.csv data_nav/*.csv data_opt/*.csv
+          git add *.csv data_nav/*.csv data_opt/*.csv
           
           # ถ้ามีข้อมูลใหม่ ให้ Push กลับเข้า main ตรงๆ
           if ! git diff --cached --quiet; then
