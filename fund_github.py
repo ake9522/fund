@@ -1,6 +1,6 @@
-!pip install requests --quiet
-!pip install numpy pandas quantstats --quiet
-!pip install scikit-learn --quiet
+# !pip install requests --quiet
+# !pip install numpy pandas quantstats --quiet
+# !pip install scikit-learn --quiet
 
 import requests
 import pandas as pd
