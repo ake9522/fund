@@ -23,17 +23,34 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-dev libxslt-dev
+
       - name: Install Dependencies
         run: |
-          pip install pandas selenium webdriver-manager beautifulsoup4 lxml html5lib requests numpy quantstats scikit-learn
+          pip install pandas selenium webdriver-manager beautifulsoup4 lxml html5lib requests numpy quantstats scikit-learn matplotlib seaborn
 
       - name: Run Fund Automation
         run: python fund_github.py
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "GitHub Action Bot"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # ดึงข้อมูลล่าสุดจาก main มาก่อนเพื่อกันเส้นแตก
+          git fetch origin main
+          git checkout main
+
+          # Add ไฟล์ทั้งหมดรวมถึงในโฟลเดอร์
           git add *.xls *.csv data_nav/*.csv data_opt/*.csv
-          # ถ้าไม่มีข้อมูลใหม่ ไม่ต้อง Commit เพื่อป้องกัน Error
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Fund data: $(date)" && git push)
+          
+          # ถ้ามีข้อมูลใหม่ ให้ Push กลับเข้า main ตรงๆ
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update Fund data: $(date +'%Y-%m-%d %H:%M')"
+            git push origin main
+          else
+            echo "No changes detected, skipping push."
+          fi
