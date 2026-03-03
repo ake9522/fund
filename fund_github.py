@@ -103,9 +103,15 @@ else:
 # URL ที่ต้องการดึงข้อมูล
 url = "https://www.finnomena.com/fn3/api/fund/public/list/"
 
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'application/json, text/plain, */*',
+    'Referer': 'https://www.finnomena.com/fund/list',
+}
+
 try:
     # ดึงข้อมูลจาก API
-    response = requests.get(url, timeout=30, verify=False)
+    response = requests.get(url, timeout=30, headers=headers, verify=False)
     response.raise_for_status()
     funds_data = response.json()
 
@@ -165,7 +171,7 @@ def fetch_data_concurrently(fund_code, endpoint_suffix, max_retries, retry_delay
     
     for attempts in range(max_retries):
         try:
-            response = requests.get(url, timeout=30, verify=False)
+            response = requests.get(url, timeout=30, headers=headers, verify=False)
             
             # การจัดการ Rate Limit (HTTP 429)
             if response.status_code == 429:
@@ -417,7 +423,9 @@ def fetch_and_save_nav(fund_code, local_path_nav, max_retries, retry_delay):
     url = f"https://www.finnomena.com/fn3/api/fund/v2/public/funds/{fund_code}/nav/q?range=MAX"
     
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'application/json, text/plain, */*',
+    'Referer': 'https://www.finnomena.com/fund/list',
     }
     
     for attempts in range(max_retries):
