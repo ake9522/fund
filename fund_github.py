@@ -813,7 +813,7 @@ plt.title(f'Efficient Frontier of Optimized Plans A (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -821,6 +821,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -872,7 +874,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize B
@@ -1068,7 +1070,7 @@ plt.title(f'Efficient Frontier of Optimized Plans B (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -1076,6 +1078,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -1127,7 +1131,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize C
@@ -1323,7 +1327,7 @@ plt.title(f'Efficient Frontier of Optimized Plans C (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -1331,6 +1335,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -1382,7 +1388,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize D
@@ -1578,7 +1584,7 @@ plt.title(f'Efficient Frontier of Optimized Plans D (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -1586,6 +1592,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -1637,7 +1645,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize E
@@ -1833,7 +1841,7 @@ plt.title(f'Efficient Frontier of Optimized Plans E (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -1841,6 +1849,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -1892,7 +1902,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize F
@@ -2088,7 +2098,7 @@ plt.title(f'Efficient Frontier of Optimized Plans F (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -2096,6 +2106,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -2147,7 +2159,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize G
@@ -2343,7 +2355,7 @@ plt.title(f'Efficient Frontier of Optimized Plans G (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -2351,6 +2363,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -2402,7 +2416,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize H
@@ -2598,7 +2612,7 @@ plt.title(f'Efficient Frontier of Optimized Plans H (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -2606,6 +2620,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -2657,7 +2673,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize I
@@ -2853,7 +2869,7 @@ plt.title(f'Efficient Frontier of Optimized Plans I (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -2861,6 +2877,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -2912,7 +2930,7 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
 # Optimize J
@@ -3108,7 +3126,7 @@ plt.title(f'Efficient Frontier of Optimized Plans J (Log-Log Scale)')
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)
 plt.legend()
 plt.tight_layout()
-plt.show()
+# plt.show()
 # --------------------------------------------------------
 
 ## correlation coefficient
@@ -3116,6 +3134,8 @@ import pandas as pd
 import numpy as np
 import ast
 import seaborn as sns
+import matplotlib
+matplotlib.use('Agg') # บังคับโหมดรันเบื้องหลัง (ไม่มีหน้าจอ)
 import matplotlib.pyplot as plt
 
 # 1. โหลดข้อมูล
@@ -3167,6 +3187,6 @@ plt.yticks(rotation=0, fontsize=9)  # ชื่อกองทุนแนวน
 plt.tight_layout()
 
 # แสดงผล
-plt.show()
+# plt.show()
 
 # --------------------------------------------------------
