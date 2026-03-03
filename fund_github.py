@@ -104,9 +104,10 @@ else:
 url = "https://www.finnomena.com/fn3/api/fund/public/list/"
 
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
     'Accept': 'application/json, text/plain, */*',
     'Referer': 'https://www.finnomena.com/fund/list',
+    'Accept-Language': 'th-TH,th;q=0.9,en-US;q=0.8,en;q=0.7',
 }
 
 try:
@@ -435,10 +436,11 @@ def fetch_and_save_nav(fund_code, local_path_nav, max_retries, retry_delay):
     url = f"https://www.finnomena.com/fn3/api/fund/v2/public/funds/{fund_code}/nav/q?range=MAX"
     
     headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
     'Accept': 'application/json, text/plain, */*',
     'Referer': 'https://www.finnomena.com/fund/list',
-    }
+    'Accept-Language': 'th-TH,th;q=0.9,en-US;q=0.8,en;q=0.7',
+}
     
     for attempts in range(max_retries):
         try:
