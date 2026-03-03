@@ -142,13 +142,25 @@ except Exception as e:
 
 # อ่านไฟล์ export (finnomena_fund_list)
 file_path = local_path+'finnomena_fund_list.csv'
-df = pd.read_csv(file_path, header=None)
+if os.path.exists(file_path):
+    df = pd.read_csv(file_path, header=None)
+else:
+    print(f"Error: {file_path} was not created due to API 403 Forbidden.")
+    # อาจจะสั่งให้จบการทำงานแบบไม่ Error
+    import sys
+    sys.exit(0)
 header_values = df.iloc[0].tolist()
 print("ค่าใน header:", header_values)
 
 # อ่านไฟล์ csv และเก็บเป็น list ของกองทั้งหมด
 file_path = local_path + 'finnomena_fund_list.csv'
-df = pd.read_csv(file_path)
+if os.path.exists(file_path):
+    df = pd.read_csv(file_path, header=None)
+else:
+    print(f"Error: {file_path} was not created due to API 403 Forbidden.")
+    # อาจจะสั่งให้จบการทำงานแบบไม่ Error
+    import sys
+    sys.exit(0)
 
 all_list = []
 all_list = df['id'].tolist()
